@@ -1,0 +1,137 @@
+<!doctype html> 
+<html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	 <link rel="stylesheet" type="text/css" href="static/css/style.css">
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">  
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <title>ΑΛΜΙ-ΡΙΚΙ</title>
+</head>
+     <div id="social">
+			     <ul>
+				     <li><a href="https://www.facebook.com" target="_blank"><img src="static/images/fb.png" width="50" height"80" align="right"  alt="facebook" title="Facebook"/></a></li>
+				     <li><a href="https://twitter.com" target="_blank"><img src="static/images/twitter.png" width="50" height"80" align="right"  alt="twitter" title="Twitter"/></a></li>
+					 <li><a href="https://www.youtube.com" target="_blank"><img src="static/images/youtube.png" width="50" height"80" align="right"  alt="Youtube" title="Youtube"/></a></li>
+					 <li><a href="http://www.plus.google.com" target="_blank"><img src="static/images/google+.png" width="50" height"80" align="right"  alt="Google plus" title="Google plus"/></a></li>
+				 </ul>
+				 <br>
+     </div><!---Τελος του social-->
+
+
+     <header>
+	     <h1>ΑΛΜΙ-ΡΙΚΙ</h1>
+     </header>
+
+     <nav> <!-- Αρχή navigation bar -->    
+         <ul>
+            <a href="{{ url_for('index') }}"><li>Αρχική</li></a>
+			<a href="{{ url_for('about') }}"><li>Πληροφορίες</li></a>
+			<a href="{{ url_for('sign_in') }}"><li style= "float:right">Σύνδεση</li></a>
+			<a href="{{ url_for('register') }}"><li style= "float:right">Εγγραφή</li></a>	
+	     </ul>
+		 
+         <div class="handle">Menu</div>
+
+     </nav><!-- Τέλος navigation bar --> 
+
+<body>	
+    <div class ="content"> <!-- Begin of content-->
+	 
+	     <div id="clockbox" text-align="left">
+
+             <script type="text/javascript">
+tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+if(nyear<1000) nyear+=1900;
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+         </div>	<!--Τελος του clockbox-->
+<br><br><br>
+<b>
+<h5><b>ΩΡΕΣ ΛΕΙΤΟΥΡΓΙΑΣ</b></h5>
+<p>Δευτέρα - Κυριακή | 12:00 - 24:00</p>
+<p><strong><em>&nbsp;</em></strong></p>
+<b>
+<hr>
+
+<div id="clockbox" text-align="left"><!-- το έχω βάλει έτσι γιατι θέλω τα ίδια όρια με του Clockbox-->
+     <h5><b>ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ</b></h5>
+     <p>&nbsp;</p>
+     <p>
+         <table style="width: 100%;" border="0" cellpadding="2" cellspacing="0">
+             <tbody>
+                 <tr>
+                 <td valign="top">Κίνι </td>
+                 </tr>
+                 <tr>
+                     <td valign="top"></td>
+                 </tr>
+                 <tr>
+                     <td valign="top">Σύρος</td>
+                 </tr>
+                 <tr>
+                     <td valign="top">841 00</td>
+                 </tr>
+                 <tr>
+                     <td valign="top">Ελλάδα</td>
+                 </tr>
+             </tbody>
+         </table>
+     <br/>
+         <table style="width: 100%;" border="0" cellpadding="2" cellspacing="0">
+             <tbody>
+                 <tr>
+                     <td>ΑΛΜΙ-ΡΙΚΙ.gr</td>
+                 </tr>
+                <tr>
+                     <td>2281 071141</td>
+                 </tr>
+                 <tr>
+                     <td>2281 071111</td>
+                 </tr>
+             </tbody>
+         </table>
+     </p>
+</div>
+
+		 
+<table>
+     <tbody>
+         <tr>
+             <td style="border: 6px solid #778037;"><iframe width="620" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.7270712921527!2d24.899926050368123!3d37.44703322850648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a2629c670fe281%3A0x62360ff42fa90b49!2zzpTPhc6_IM-EzrbOuc-EzrbOr866zrnOsSDPg8-EJ86xz4HOvM-Fz4HOr866zrnOsQ!5e0!3m2!1sel!2sgr!4v1515861555971" width="600" height="450" frameborder="0" style="border:0"></iframe></td>
+         </tr>
+     </tbody>
+</table>
+ 
+<script>
+
+
+
+	 $('.handle').on('click', function(){
+	     $('nav ul').toggleClass('showing');
+	 });
+</script>
+</div> <!-- End of Content-->
+</body>
+</html>	 	 
